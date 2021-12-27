@@ -1,0 +1,1244 @@
+{
+	"info": {
+		"_postman_id": "b0da0f66-2fd8-4129-8469-8f85e7aa6ab8",
+		"name": "Roll Up",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "num_of_batches_submitted",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/num_of_batches_submitted",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"num_of_batches_submitted"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token_registry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/token_registry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"token_registry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "name_registry",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/name_registry",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"name_registry"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "merkle_utils",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/merkle_utils",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"merkle_utils"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logger",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/logger",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"logger"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_batch_marker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/invalid_batch_marker",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"invalid_batch_marker"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "governance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/governance",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"governance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "invalid_batch_marker",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/get_latest_balance_tree_root",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"get_latest_balance_tree_root"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "fraud_proof",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/fraud_proof",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"fraud_proof"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deposit_tree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/deposit_manager",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"deposit_manager"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "accounts_tree",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/accounts_tree",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"accounts_tree"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "zero_bytes32",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/zero_bytes32",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"zero_bytes32"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "process_tx",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"balanceRoot\" : \"\",\n    \"accountsRoot\" : \"\",\n    \"sig\" : \"\",\n    \"txBytes\" : \"\",\n    \"from_pda_proof\" : \"\",\n    \"accountProofs\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/process_tx",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"process_tx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "process_batch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"initialStateRoot\" : \"\",\n    \"accountsRoot\" : \"\",\n    \"txs\" : \"\",\n    \"batchProofs\" : \"\",\n    \"expectedTxRoot\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/process_batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"process_batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_batch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"batchID\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/get_batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"get_batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "batches",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"inputs\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/batches",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"batches"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "apply_tx",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"markelProof\" : \"\",\n    \"txbytes\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/apply_tx",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"apply_tx"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "slash_rollback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/slash_rollback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"slash_rollback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "submit_batch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"submitBatch\": \"\",\n    \"txs\": \"\",\n    \"updatedRoot\": \"\",\n    \"batchType\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/submit_batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"submit_batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finalise_deposits",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"finaliseDepositsAndSubmitBatch\": \"\",\n    \"subTreeDepth\": \"\",\n    \"zero_account_mp\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/finalise_deposits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"finalise_deposits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dispute_batch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"batch_id\": \"\",\n    \"txs\": \"\",\n    \"batchProofs\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/dispute_batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"dispute_batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "withdraw_stake",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"submitBatch\": \"\",\n    \"batch_id\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/withdraw_stake",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"withdraw_stake"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "rollupReadFuncs",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollup/get_rollup_read",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollup",
+						"get_rollup_read"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "request_token_registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"key\": \"\",\n    \"from\": \"\",\n    \"tokenContract\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/request_token_registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"request_token_registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finalise_token_registration",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"tokenContract\" : \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/finalise_token_registration",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"finalise_token_registration"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register_name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\" : \"\",\n    \"from\" : \"\",\n    \"name\" : \"\",\n    \"addr\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/register_name",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"register_name"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_contract_details",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"key\": \"\",\n    \"from\": \"\",\n    \"name\" : \"\",\n    \"addr\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/update_contract_details",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"update_contract_details"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deposit",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"_amount\": \"\",\n    \"_tokenType\": \"\",\n    \"_pubkey\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/deposit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"deposit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deposit_for",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"_destination\": \"\",\n    \"_amount\": \"\",\n    \"_tokenType\": \"\",\n    \"_pubkey\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/deposit_for",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"deposit_for"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "dequeue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/dequeue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"dequeue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "enqueue",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"newDepositSubtree\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/enqueue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"enqueue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "finalise_deposits",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"key\": \"\",\n    \"from\": \"\",\n    \"_subTreeDepth\": \"\",\n    \"_zero_account_mp\":\"\",\n    \"latestBalanceTree\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/finalise_deposits",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"finalise_deposits"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_batch_rollback",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"key\": \"\",\n    \"from\": \"\",\n    \"batch_id\": \"\",\n    \"committer\":\"\",\n    \"stateRoot\": \"\",\n    \"txRoot\": \"\",\n    \"stakeSlashed\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_batch_rollback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_batch_rollback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_deposit_finalised",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"depositSubTreeRoot\": \"\",\n    \"pathToSubTree\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_deposit_finalised",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_deposit_finalised"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_deposit_leaf",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"left\": \"\",\n    \"right\":\"\",\n    \"newRoot\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_deposit_leaf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_deposit_leaf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_deposit_queued",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"accountID\": \"\",\n    \"pubkey\":\"\",\n    \"dataa\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_deposit_queued",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_deposit_queued"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_deposit_subtree",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"root\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_deposit_subtree",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_deposit_subtree"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_new_batch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"committer\": \"\",\n    \"txroot\":\"\",\n    \"updatedRoot\": \"\",\n    \"index\" : \"\",\n    \"batchType\":\"\"\n\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_new_batch",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_new_batch"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_new_pubkey",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"accountID\": \"\",\n    \"pubkey\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_new_pubkey",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_new_pubkey"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_registered_token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"tokenType\": \"\",\n    \"tokenContract\":\"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_registered_token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_registered_token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_registration_request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"tokenContract\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_registration_request",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_registration_request"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_rollback_final",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"totalBatchesSlashed\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_rollback_final",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_rollback_final"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "log_stake_withdraw",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"\",\n    \"from\": \"\",\n    \"committed\": \"\",\n    \"amount\": \"\",\n    \"batch_id\": \"\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/v1/rollUpRinkey/log_stake_withdraw",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"rollUpRinkey",
+						"log_stake_withdraw"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
