@@ -1,5 +1,5 @@
 {
-  "name": "rollupapi",
+  "name": "cloutcontracts-api",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -18,5 +18,5 @@
     "serve": "nodemon app.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "MIT"
 }
