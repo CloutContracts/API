@@ -1,0 +1,22 @@
+{
+  "name": "rollupapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "ethereumjs-tx": "^2.1.2",
+    "express": "^4.17.1",
+    "https": "^1.0.0",
+    "nodemon": "^2.0.7",
+    "web3": "^1.5.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
