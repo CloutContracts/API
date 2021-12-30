@@ -17,15 +17,14 @@ const port = 3000;
 // });
 
 app.get('/', (req, res) => {
-    res.status(404).send("Welcome To Roll Up Api");
+    res.status(404).send("Welcome to the Rollup Api");
 });
 
 const rollUp = require('./routes/api/rollUpApi.js');
 const rollUpRinkey = require('./routes/api/rollUpRinkey.js');
 
 
-app.use('/api/v1/rollup', rollUp);
-app.use('/api/v1/rollUpRinkey', rollUpRinkey);
+app.use('/api/v1/rollUpMainnet', rollUp);
+app.use('/api/v1/rollUpRinkeby', rollUpRinkey);
 
-app.listen(process.env.PORT || port, () => { console.log("Roll Up project API are live now.")})
-
+app.listen(process.env.PORT || port, () => { console.log("The Rollup API is live now.")})
