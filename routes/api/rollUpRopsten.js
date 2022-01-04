@@ -1,18 +1,13 @@
 
-const ADDR =  require( "./contractAddress.js");
-const ABI= require( "./contractABI.js");
+const ADDR =  require( "./Ropsten_contractAddress.js");
+const ABI= require( "./Ropsten_contractABI.js");
 const express = require('express');
 var Web3 = require ('web3');
 var router = express.Router();
 const EthereumTx = require('ethereumjs-tx').Transaction;
 const bodyParser = require('body-parser');
 
-var web3 = new Web3(new Web3.providers.HttpProvider('https://mainnet.infura.io/v3/1bbf1e4aba5a4bf29a11300f77ca496d'));
-
-// var publicKey = '0xf67D9611204ca60dB6E6006643fb3cf0EdC8b3CA';
-
-// var contractAddress =  "0xFa32465ddFC3628F8723fe7941F035a494bfbFf2";
-// var contractAddress =  "0x2c7716bdf98e181df4cf1b40ad7648a40ee813b9";
+var web3 = new Web3(new Web3.providers.HttpProvider('https://ropsten.infura.io/v3/1bbf1e4aba5a4bf29a11300f77ca496d'));
 
 const Contract = new web3.eth.Contract(ABI.abi, ADDR.contractAddress);
 const RegisterContract = new web3.eth.Contract(ABI.tokenRegistery_ABI, ADDR.tokenRegistery_address);
@@ -24,10 +19,8 @@ const LoggerContract = new web3.eth.Contract(ABI.logger_ABI, ADDR.logger_address
 
 
 
+// Main Contract
 
-
-// write Functions
-// SlashAndRollback
 router.post('/slash_rollback', async(req,res) =>{
     try {
         var key = req.body.key
@@ -43,7 +36,7 @@ router.post('/slash_rollback', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -79,7 +72,7 @@ router.post('/submit_batch', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -115,7 +108,7 @@ router.post('/finalise_deposits', async(req,res) =>{
             data: data
         }
 
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -151,7 +144,7 @@ router.post('/dispute_batch', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -188,7 +181,7 @@ router.post('/withdraw_stake', async(req,res) =>{
             data: data
         }
 
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -529,6 +522,7 @@ router.get('/get_rollup_read', async(req,res)=>{
     }
 })
 
+
 //tokenRegister Contract
 
 router.post('/request_token_registration', async(req,res) =>{
@@ -540,15 +534,16 @@ router.post('/request_token_registration', async(req,res) =>{
         var data = await RegisterContract.methods.requestTokenRegistration(tokenContract).encodeABI();
         var privateKey = Buffer.from(key, 'hex');
         const txData = {
-            gasPrice: web3.utils.toHex(40000000000),
-            gasLimit: web3.utils.toHex(6000000),
+            gasPrice: web3.utils.toHex(42000000000),
+            gasLimit: web3.utils.toHex(90000),
             to: ADDR.tokenRegistery_address,
             from: fromAddress,
             value: 0x0,
             nonce:  await web3.eth.getTransactionCount(fromAddress),
-            data: data
+            data: data,
+            "chainId": 3
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         await web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -580,7 +575,7 @@ router.post('/finalise_token_registration', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -613,7 +608,7 @@ router.post('/register_name', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -643,7 +638,7 @@ router.post('/update_contract_details', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -676,7 +671,7 @@ router.post('/deposit', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -709,7 +704,7 @@ router.post('/deposit_for', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -739,7 +734,7 @@ router.post('/dequeue', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -770,7 +765,7 @@ router.post('/enqueue', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -802,7 +797,7 @@ router.post('/finalise_deposits', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -838,7 +833,7 @@ router.post('/log_batch_rollback', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -870,7 +865,7 @@ router.post('/log_deposit_finalised', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -904,7 +899,7 @@ router.post('/log_deposit_leaf', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -938,7 +933,7 @@ router.post('/log_deposit_queued', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -970,7 +965,7 @@ router.post('/log_deposit_subtree', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -1005,7 +1000,7 @@ router.post('/log_new_batch', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -1038,7 +1033,7 @@ router.post('/log_new_pubkey', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -1071,7 +1066,7 @@ router.post('/log_registered_token', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -1103,7 +1098,7 @@ router.post('/log_registration_request', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -1135,7 +1130,7 @@ router.post('/log_rollback_final', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -1169,7 +1164,7 @@ router.post('/log_stake_withdraw', async(req,res) =>{
             nonce:  await web3.eth.getTransactionCount(fromAddress),
             data: data
         }
-        const tx = new EthereumTx(txData,  {chain:'mainnet', hardfork: 'petersburg'});
+        const tx = new EthereumTx(txData,  {chain:'ropsten', hardfork: 'petersburg'});
         tx.sign(privateKey);
         const serializedTx = tx.serialize()
         web3.eth.sendSignedTransaction('0x' + serializedTx.toString('hex'))
@@ -1183,5 +1178,19 @@ router.post('/log_stake_withdraw', async(req,res) =>{
     }
 })
 
+async function getCurrentGasPrices() {
+    let response = await axios.get('https://ethgasstation.info/json/ethgasAPI.json');
+    let prices = {
+    low: response.data.safeLow / 10,
+    medium: response.data.average / 10,
+    high: response.data.fast / 10
+    };
+    return prices;
+}
+
 
 module.exports = router;
+
+
+
+
