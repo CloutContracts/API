@@ -21,10 +21,10 @@ app.get('/', (req, res) => {
 });
 
 const rollUp = require('./routes/api/rollUpApi.js');
-const rollUpRinkey = require('./routes/api/rollUpRinkey.js');
+const rollUpRopsten = require('./routes/api/rollUpRopsten.js');
 
 
 app.use('/api/v1/rollUpMainnet', rollUp);
-app.use('/api/v1/rollUpRinkeby', rollUpRinkey);
+app.use('/api/v1/rollUpRopsten', rollUpRopsten);
 
 app.listen(process.env.PORT || port, () => { console.log("The Rollup API is live now.")})
